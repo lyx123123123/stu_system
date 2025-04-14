@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2025-04-17T12:21:52.889578+00:00",
+    "sensor_id": "temp_sensor_000",
+    "type": "temperature",
+    "value": 24.5,
+    "unit": "\u00b0C"
+  },
+  {
+    "timestamp": "2025-04-17T12:21:53.889654+00:00",
+    "sensor_id": "temp_sensor_001",
+    "type": "temperature",
+    "value": 25.0,
+    "unit": "\u00b0C"
+  },
+  {
+    "timestamp": "2025-04-17T12:21:54.889667+00:00",
+    "sensor_id": "temp_sensor_002",
+    "type": "temperature",
+    "value": 25.5,
+    "unit": "\u00b0C"
+  }
+]
