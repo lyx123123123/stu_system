@@ -5,16 +5,7 @@ from fastapi import FastAPI, WebSocket
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
 
-# 初始化 InfluxDB 和 FastAPI 启动influxDB： sudo systemctl start influxdb
-# 创建token
-# influx setup \
-# >   --username admin \
-# >   --password your_secure_password \
-# >   --org your_org \
-# >   --bucket default_bucket \
-# >   --retention 7d \
-# >   --force
-# influx auth create --all-access --description "Super Admin Token"
+# 初始化 InfluxDB 和 FastAPI 
 client = InfluxDBClient(url="http://localhost:8086", token="VpN6AUceFSlbJEcjhMkX7AZrsrZfAn2R1c4AjPXhaalR8hxVxbBbUbwKiLxbp7C3rfCbxsLaD2FjInz72BZx9w==", org="your_org")
 write_api = client.write_api(write_options=SYNCHRONOUS)
 app = FastAPI()
