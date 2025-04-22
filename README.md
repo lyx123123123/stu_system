@@ -20,7 +20,7 @@ python3 client.py
 2. 存储到 InfluxDB（或 MySQL）。
 3. 提供 WebSocket 实时推送。
 
-# influxDB2 在ubuntu安装：i
+# influxDB2 在ubuntu安装：
 
 curl --silent --location -O \
 https://repos.influxdata.com/influxdata-archive.key

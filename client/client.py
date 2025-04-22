@@ -7,7 +7,10 @@ import sqlite3
 from datetime import datetime, timezone
 from threading import Thread
 import re
+from SimpleCacheDB import SimpleCacheDB
+
 # 创建一对虚拟串口： socat -d -d pty,raw,echo=0 pty,raw,echo=0
+
 # 配置参数
 SERIAL_PORT = '/dev/pts/4'  # USB虚拟串口设备
 BAUDRATE = 115200
@@ -31,10 +34,12 @@ def init_local_db():
 # 带时间戳的数据打包
 def pack_data(raw_data):
     timestamp = datetime.now(timezone.utc).isoformat(timespec='microseconds')
+    
     return {
         "timestamp": timestamp,
         "value": parse_sensor_data(raw_data)
     }
+    
     
 def parse_sensor_data(raw_data):
     try:
@@ -65,6 +70,7 @@ def send_to_cloud(data):
 
 # 主循环
 def main():
+    # 缓存初始化
     init_local_db()
     while True:
         try:
