@@ -7,7 +7,9 @@ import sqlite3
 from datetime import datetime, timezone
 from threading import Thread
 import re
+
 # 创建一对虚拟串口： socat -d -d pty,raw,echo=0 pty,raw,echo=0
+
 # 配置参数
 SERIAL_PORT = '/dev/pts/4'  # USB虚拟串口设备
 BAUDRATE = 115200
